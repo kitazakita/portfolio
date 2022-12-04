@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: white;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* 共通 */
+h2.section-sub-title {
+  font-size: 3vw;
+}
+section {
+  margin-top: 50vh;
+  text-align: center;
+}
+
+/* 背景画像用 */
+.back-bg {
+  background-position: center center;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.back-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+/* ページタイトル */
+h1.page-title-name {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 3vw;
+  letter-spacing: 2.9vw;
+  text-align: center;
+  margin-top: 14vh;
+  font-weight: normal;
+}
+h2.page-title {
+  font-family: 'Alumni Sans Collegiate One', sans-serif;
+  font-size: 8vw;
+  text-align: center;
+  letter-spacing: 0.3vw;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 40vh;
+}
+
+/* GitHub */
+/* Skill */
+section#skill p.skill-description {
+  width: 40vw;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  /* 共通 */
+  h2.section-sub-title {
+    font-size: 8vw;
+  }
+  /* ページタイトル */
+  h1.page-title-name {
+    font-size: 8vw;
+  }
+  h2.page-title {
+    font-size: 17vw;
+  }
+  /* Skill */
+  section#skill p.skill-description {
+    width: 60vw;
+  }
+}

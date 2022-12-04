@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/reset.css';
+import './css/App.css';
+import back_bg from './imgs/back-bg.jpg';
+import Works from './components/Works.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <div
+        className="back-bg"
+        style={{ backgroundImage: `url(${back_bg})` }}
+      ></div>
+      <h1 className="page-title-name">Kitazaki Takanori</h1>
+      <h2 className="page-title">My Portfolio</h2>
+
+      <section id="github">
+        <h2 className="section-sub-title">GitHub Account</h2>
+        <p>@kitazakita</p>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <a href="https://github.com/kitazakita">
+            https://github.com/kitazakita
+          </a>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </section>
+
+      <section id="skill">
+        <h2 className="section-sub-title">Skill</h2>
+        <p className="skill-description">
+          HTML / CSS / Sass / JavaScript / React / Next.js / Vite / BootStrap /
+          MUI / Git / illustrator / Photoshop / Figma
+        </p>
+      </section>
+
+      <Works />
+    </>
   );
 }
 

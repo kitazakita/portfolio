@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "title": "rPhoneサイト",
+      "url": "https://st1.weblesson0805.site/",
+      "jsFramework": "-",
+      "uiFramework": "-",
+      "mark": "HTML",
+      "style": "Sass(Scss)",
+      "jsLib": "jQuery",
+      "build": "FTPサーバー(Nginx)",
+      "desc": "一番最初に制作したダミーサイトです。初めてSass(Scss)とjQueryを使用して制作し、1ページで完結するLP風に仕上げました。今になって思うことは、スマートフォンの新製品紹介ページなので、アニメーションや現代風な表現を使用したほうが良かったと思いました。　　　　　　　"
+    },
+    {
+      "title": "九州国際空港(仮)",
+      "url": "https://",
+      "jsFramework": "React / Next.js",
+      "uiFramework": "MUI",
+      "mark": "JSX",
+      "style": "Sass(Scss)",
+      "jsLib": "Swiper",
+      "build": "Vercel",
+      "desc": "JavaScriptフレームワークのReact.jsを初めて使用したWEBサイトです。最初はNext.jsを使用せず、React-Router-Domを使用して、他ページへのページ移動を実現していました。ですが制作していく中で、様々なリンクが必要と予想し制作の効率化のため、後からNext.jsを導入しました。Reactは関数コンポーネントにて各種制作しており、Reactのメイン機能 “UseState” を使用しております。空港サイトという想定ですので、データの処理機能を簡易実装しました。下記2項目は、フライト情報ページにて実装しております。[国内線フライト情報 / 国際線フライト情報]・APIを叩く練習にて、クジラ週間天気API様より週間天気予報を取得しました。取得データを ”async/await” にて、ページにレンダリングしております。illustratorにてクリッカブルマップ(SVG)を作成し、クリックされた地域が表示されるといった仕組みです。・フライト情報も簡単にですが、ローカルにjsonファイルを用意し、レンダリング、フィルタリング出来るように致しました。"
+    },
+    {
+      "title": "甘未族(仮)",
+      "url": "https://",
+      "jsFramework": "React / Next.js",
+      "uiFramework": "-",
+      "mark": "JSX",
+      "style": "Sass(Scss)",
+      "jsLib": "-",
+      "build": "Vercel",
+      "desc": "こちらのサイトは空港サイトと殆ど同時期に制作を開始しました。空港サイトがコンテンツが多い、散らかっている印象があるので、余白を意識した別ジャンルのサイトを制作しようと思ったのが理由です。空港サイトと同じく、React / Next.js を使用しました。軽量なサイトを目指して制作しましたが、制作後にNext.jsの画像をWEBPに圧縮する記述をすれば良かったと思いました。"
+    }
+  ]
+}
