@@ -9,11 +9,11 @@
       "style": "Sass(Scss)",
       "jsLib": "jQuery",
       "build": "FTPサーバー(Nginx)",
-      "desc": "一番最初に制作したダミーサイトです。初めてSass(Scss)とjQueryを使用して制作し、1ページで完結するLP風に仕上げました。今になって思うことは、スマートフォンの新製品紹介ページなので、アニメーションや現代風な表現を使用したほうが良かったと思いました。　　　　　　　"
+      "desc": "一番最初に制作したダミーサイトです。 初めてSass(Scss)とjQueryを使用して制作し、1ページで完結するLP風に仕上げました。今になって思うことは、スマートフォンの新製品紹介ページなので、アニメーションや現代風な表現を使用したほうが良かったと思いました。"
     },
     {
       "title": "九州国際空港(仮)",
-      "url": "https://",
+      "url": "#",
       "jsFramework": "React / Next.js",
       "uiFramework": "MUI",
       "mark": "JSX",
@@ -24,7 +24,7 @@
     },
     {
       "title": "甘未族(仮)",
-      "url": "https://",
+      "url": "#",
       "jsFramework": "React / Next.js",
       "uiFramework": "-",
       "mark": "JSX",

@@ -5,6 +5,10 @@
   font-family: 'Noto Sans JP', sans-serif;
   color: white;
 }
+
+.test {
+  color: #fffafa;
+}
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -68,9 +72,67 @@ section#skill p.skill-description {
   margin: 0 auto;
 }
 
+/* Works */
+section#works {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50vh;
+}
+section#works p {
+  font-size: 0.7rem;
+}
+p.section-sub-title {
+  margin-bottom: 10vh;
+}
+section#works .works-card {
+  margin-bottom: 10vh;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+section#works .flex-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+section#works p.img {
+  width: 40%;
+}
+section#works ul {
+  width: 50%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+section#works ul li {
+  width: 50%;
+}
+section#works .description {
+  margin-top: 7vh;
+  text-align: left;
+}
+@media screen and (max-width: 700px) {
+  /* Works */
+  section#works .flex-wrapper {
+    flex-direction: column;
+    gap: 5vh;
+  }
+  section#works p.img {
+    width: 60%;
+  }
+  section#works ul {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 600px) {
   /* 共通 */
-  h2.section-sub-title {
+  h2.section-main-title {
     font-size: 8vw;
   }
   /* ページタイトル */
@@ -83,5 +145,22 @@ section#skill p.skill-description {
   /* Skill */
   section#skill p.skill-description {
     width: 60vw;
+  }
+  /* Works */
+  section#works p.img {
+    width: 60%;
+  }
+  section#works ul {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* Works */
+  section#works p.img {
+    width: 80%;
+  }
+  section#works ul {
+    width: 100%;
+    color: #ffffff;
   }
 }
