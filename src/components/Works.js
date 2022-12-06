@@ -12,7 +12,7 @@ const Works = () => {
 
   return (
     <section id='works'>
-      <h2 className='section-main-title'>Works</h2>
+      <h2 className='section-main-title section-sub-title'>Works</h2>
       <p className='section-sub-title'>全て架空のWEBサイトです。</p>
 
       {data.data.map((v, i) => {
