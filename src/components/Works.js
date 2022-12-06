@@ -1,5 +1,4 @@
-import React from 'react';
-import data from './works.json';
+import works from './works.json';
 import img01 from '../imgs/works-img01.png';
 import img02 from '../imgs/works-img02.png';
 import img03 from '../imgs/works-img03.png';
@@ -15,7 +14,7 @@ const Works = () => {
       <h2 className='section-main-title section-sub-title'>Works</h2>
       <p className='section-sub-title'>全て架空のWEBサイトです。</p>
 
-      {data.data.map((v, i) => {
+      {works.data.map((v, i) => {
         return (
           <div className='works-card' key={i}>
             <div className='flex-wrapper'>

@@ -1,27 +1,24 @@
 import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
-import particlesOptions from './utils/particles1.json'; //https://particles.js.org/
+import particlesOptions from './utils/particles.json'; //https://particles.js.org/
+import { useMediaQuery } from 'react-responsive';
 import './css/reset.css';
 import './css/App.css';
 import back_bg from './imgs/back-bg.jpg';
 import Works from './components/Works.js';
+import Arrow from './components/Arrow.js';
 
 function App() {
   const particlesInit = useCallback(async (engine) => {
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
-  // const particlesLoaded = useCallback(async (container) => {}, []);
 
   return (
     <>
       <Particles
         id='tsparticles'
         init={particlesInit}
-        // loaded={particlesLoaded}
         options={particlesOptions}
       />
       <div
@@ -31,6 +28,8 @@ function App() {
 
       <h1 className='page-title-name'>Kitazaki Takanori</h1>
       <h2 className='page-title'>My Portfolio</h2>
+
+      <Arrow />
 
       <section id='github'>
         <h2 className='section-sub-title'>GitHub Account</h2>
@@ -42,6 +41,8 @@ function App() {
         </p>
       </section>
 
+      <Arrow />
+
       <section id='skill'>
         <h2 className='section-sub-title'>Skill</h2>
         <p className='skill-description'>
@@ -50,7 +51,9 @@ function App() {
         </p>
       </section>
 
-      <Works />
+      <Arrow />
+
+      <Works libs={useMediaQuery} />
     </>
   );
 }
