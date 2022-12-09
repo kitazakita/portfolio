@@ -7,11 +7,23 @@ import './css/App.css';
 import back_bg from './imgs/back-bg.jpg';
 import Works from './components/Works.js';
 import Arrow from './components/Arrow.js';
+import { useSpring, animated } from 'react-spring';
 
 function App() {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
+
+  const [styles, setStyles] = useSpring(() => {
+    return {
+      fontSize: '8vw',
+    };
+  });
+
+  const nameArry = [];
+  // nameArry
+  const name = 'Kitazaki Takanori';
+  nameArry.push(name.split(''));
 
   return (
     <>
@@ -25,8 +37,20 @@ function App() {
         style={{ backgroundImage: `url(${back_bg})` }}
       ></div>
 
-      <h1 className='page-title-name'>Kitazaki Takanori</h1>
-      <h2 className='page-title'>My Portfolio</h2>
+      <h1 className='page-title-name'>
+        {nameArry[0].map((v, i) => {
+          return <span key={i}>{v}</span>;
+        })}
+      </h1>
+
+      <animated.h2
+        style={styles}
+        className='page-title'
+        onMouseEnter={(e) => setStyles({ fontSize: '15vw' })}
+        onMouseLeave={(e) => setStyles({ fontSize: '8vw' })}
+      >
+        My Portfolio
+      </animated.h2>
 
       <Arrow />
 

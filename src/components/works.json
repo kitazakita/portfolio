@@ -15,7 +15,7 @@
     {
       "iconTitle": "デモサイト02",
       "title": "九州国際空港(仮)",
-      "url": "#",
+      "url": "https://kitazaki-airport.vercel.app/",
       "jsFramework": "React / Next.js",
       "uiFramework": "MUI",
       "mark": "JSX",
@@ -27,7 +27,7 @@
     {
       "iconTitle": "デモサイト03",
       "title": "甘未族(仮)",
-      "url": "#",
+      "url": "https://kitazaki-kanmizoku.vercel.app/",
       "jsFramework": "React / Next.js",
       "uiFramework": "-",
       "mark": "JSX",

@@ -122,6 +122,15 @@ h1.page-title-name {
   margin-top: 14vh;
   font-weight: normal;
 }
+h1.page-title-name span {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 3vw;
+  letter-spacing: 2.9vw;
+  text-align: center;
+  margin-top: 14vh;
+  font-weight: normal;
+  text-transform: uppercase;
+}
 h2.page-title {
   font-family: 'Alumni Sans Collegiate One', sans-serif;
   font-size: 8vw;
