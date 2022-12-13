@@ -16,7 +16,7 @@ const Skill = () => {
       markupRef.current,
       {
         // from
-        x: '-30vw',
+        x: '-10vw',
         opacity: 0,
       },
       {
@@ -35,7 +35,7 @@ const Skill = () => {
       stylingRef.current,
       {
         // from
-        x: '30vw',
+        x: '10vw',
         opacity: 0,
       },
       {
@@ -54,7 +54,7 @@ const Skill = () => {
       jsRef.current,
       {
         // from
-        x: '-30vw',
+        x: '-10vw',
         opacity: 0,
       },
       {
@@ -73,7 +73,7 @@ const Skill = () => {
       otherRef.current,
       {
         // from
-        x: '30vw',
+        x: '10vw',
         opacity: 0,
       },
       {
@@ -115,9 +115,9 @@ const Skill = () => {
       <section className='skill-styling' ref={stylingRef}>
         <div className='skill-item'>
           <h3>CSS3</h3>
+          <p>基本的なCSS全般</p>
           <p>疑似要素before, afterや、nth-child</p>
-          <p>flexbox, css grid</p>
-          <p>position</p>
+          <p>flexbox, css grid, position</p>
           <p>セレクタ詳細度</p>
         </div>
         <div className='skill-item'>

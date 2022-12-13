@@ -46,7 +46,7 @@ function App() {
       githubRef.current,
       {
         // from
-        x: '-30vw',
+        x: '-10vw',
         opacity: 0,
       },
       {
@@ -65,7 +65,7 @@ function App() {
       skillRef.current,
       {
         // from
-        x: '30vw',
+        x: '10vw',
         opacity: 0,
       },
       {
@@ -140,8 +140,8 @@ function App() {
           <BuildCircleIcon />
         </div>
         <div className='section-sub-title'>
-          <h2>Skill</h2>
-          <p>2022年8月より学習を開始しました。</p>
+          <h2 className='section-sub-title'>Skill</h2>
+          <p>★2022年8月より学習を開始しました。</p>
         </div>
 
         <Skill />

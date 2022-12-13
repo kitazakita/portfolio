@@ -4,9 +4,10 @@
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
   color: white;
+  /* outline: 1px solid red; */
 }
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 img {
@@ -234,6 +235,9 @@ section#works .description {
 }
 
 @media screen and (max-width: 800px) {
+  .section-icon svg {
+    font-size: 15vw;
+  }
   section#skill .skill-container section {
     flex-direction: column;
   }
@@ -243,6 +247,13 @@ section#works .description {
 }
 
 @media screen and (max-width: 700px) {
+  /* 共通 */
+  h2.section-main-title {
+    font-size: 10vw;
+  }
+  h2.section-sub-title {
+    font-size: 6vw;
+  }
   /* Works */
   section#works .flex-wrapper {
     flex-direction: column;
