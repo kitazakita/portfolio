@@ -164,8 +164,9 @@ section#skill .skill-container section {
   -webkit-backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 section#skill .skill-container section p {
   font-size: 0.8rem;
@@ -180,10 +181,10 @@ section#skill .skill-container section:nth-child(even) {
   margin-left: auto;
 }
 section#skill .skill-container section .skill-item {
-  width: 50%;
+  width: 40%;
 }
 section#skill .skill-container section .skill-item:not(:first-child) {
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
 }
 section#skill .skill-container section:last-child {
   margin-bottom: 10vh;
@@ -240,6 +241,10 @@ section#works .description {
   }
   section#skill .skill-container section {
     flex-direction: column;
+    align-items: center;
+  }
+  section#skill .skill-container section .skill-item {
+    width: 50%;
   }
   section#skill .skill-container section:not(:first-child) {
     margin-top: 10vh;
