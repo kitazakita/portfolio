@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 import 'swiper/css/pagination';
-import { Autoplay, EffectCards, Pagination } from 'swiper';
+import { Autoplay, EffectCards } from 'swiper';
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 
 import works from './works.json';
 import img01 from '../imgs/works-img01.png';
@@ -17,8 +18,15 @@ const Works = () => {
 
   return (
     <section id='works'>
+      <div className='section-icon'>
+        <CollectionsBookmarkIcon />
+      </div>
+
       <h2 className='section-main-title section-sub-title'>Works</h2>
-      <p className='section-sub-title'>全て架空のWEBサイトです。</p>
+      <div className='section-sub-title'>
+        <p>全て架空のWEBサイトです。</p>
+        <p>スワイプしてご覧下さい。</p>
+      </div>
 
       <Swiper
         effect={'cards'}

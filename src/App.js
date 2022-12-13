@@ -1,24 +1,30 @@
 import { useCallback, useLayoutEffect, useRef } from 'react';
 import Particles from 'react-particles';
-import { loadFull } from 'tsparticles';
-import particlesOptions from './utils/particles.json'; //https://particles.js.org/
+// import { loadFull } from 'tsparticles';
+// import { loadFireflyPreset } from 'tsparticles-preset-firefly';
+import { loadStarsPreset } from 'tsparticles-preset-stars';
+// import particlesOptions from './utils/particles.json'; //https://particles.js.org/
+// import particlesOptions from './utils/particles2.json'; //https://particles.js.org/
 import './css/reset.css';
 import './css/App.css';
 import back_bg from './imgs/back-bg.jpg';
 import Works from './components/Works.js';
 import Arrow from './components/Arrow.js';
+import Skill from './components/Skill';
 import { useSpring, animated } from 'react-spring';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import BuildCircleIcon from '@mui/icons-material/BuildCircle';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   // tsparticles
   const particlesInit = useCallback(async (engine) => {
-    await loadFull(engine);
+    // await loadFull(engine);
+    await loadStarsPreset(engine);
   }, []);
-
   //react-spring
   const [styles, setStyles] = useSpring(() => {
     return {
@@ -31,25 +37,11 @@ function App() {
   const skillRef = useRef();
 
   //TOP Name用
-  let splitNameArry = [];
   const myName = 'Kitazaki Takanori';
-  splitNameArry.push(myName.split(''));
-  // console.log(splitNameArry[0]);
 
   //gsap用
   useLayoutEffect(() => {
     // -- ANIMATION CODE HERE --
-
-    splitNameArry[0].forEach((c, i) => {
-      gsap.to(c, 0.6, {
-        // ease: Back.easeOut,
-        delay: i * 0.05,
-        startAt: { y: '-50%', opacity: 0 },
-        y: '0%',
-        opacity: 1,
-      });
-    });
-
     gsap.fromTo(
       githubRef.current,
       {
@@ -62,14 +54,13 @@ function App() {
         scrollTrigger: {
           trigger: githubRef.current,
           start: 'top 80%',
-          markers: true,
+          // markers: true,
         },
         x: 0,
         opacity: 1,
         duration: 1.2,
       }
     );
-
     gsap.fromTo(
       skillRef.current,
       {
@@ -82,14 +73,13 @@ function App() {
         scrollTrigger: {
           trigger: skillRef.current,
           start: 'top 80%',
-          markers: true,
+          // markers: true,
         },
         x: 0,
         opacity: 1,
         duration: 1.2,
       }
     );
-
     return () => {
       // cleanup code (optional)
     };
@@ -100,7 +90,17 @@ function App() {
       <Particles
         id='tsparticles'
         init={particlesInit}
-        options={particlesOptions}
+        options={{
+          preset: 'stars',
+          background: {
+            opacity: 0,
+          },
+          particles: {
+            size: {
+              value: 1,
+            },
+          },
+        }}
       />
       <div
         className='back-bg'
@@ -121,6 +121,9 @@ function App() {
       <Arrow />
 
       <section id='github' ref={githubRef}>
+        <div className='section-icon'>
+          <GitHubIcon />
+        </div>
         <h2 className='section-sub-title'>GitHub Account</h2>
         <p>@kitazakita</p>
         <p>
@@ -133,11 +136,15 @@ function App() {
       <Arrow />
 
       <section id='skill' ref={skillRef}>
-        <h2 className='section-sub-title'>Skill</h2>
-        <p className='skill-description'>
-          HTML / CSS / Sass / JavaScript / React / Next.js / Vite / BootStrap /
-          MUI / Git / illustrator / Photoshop / Figma
-        </p>
+        <div className='section-icon'>
+          <BuildCircleIcon />
+        </div>
+        <div className='section-sub-title'>
+          <h2>Skill</h2>
+          <p>2022年8月より学習を開始しました。</p>
+        </div>
+
+        <Skill />
       </section>
 
       <Arrow />

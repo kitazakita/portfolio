@@ -22,6 +22,9 @@ section {
   margin-top: 50vh;
   text-align: center;
 }
+.section-icon svg {
+  font-size: 5vw;
+}
 
 /* コピペ */
 .arrow-container {
@@ -109,7 +112,7 @@ section {
   bottom: 0;
   left: 0;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 0;
 }
 
@@ -147,6 +150,43 @@ section#skill p.skill-description {
   width: 40vw;
   margin: 0 auto;
 }
+section#skill .skill-container {
+}
+section#skill .skill-container section {
+  width: 80%;
+  padding: 1rem 2rem;
+  margin-top: 15vh;
+  /* background-color: rgb(56, 54, 54); */
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section#skill .skill-container section p {
+  font-size: 0.8rem;
+}
+section#skill .skill-container section:first-child {
+  margin-top: 1rem;
+}
+section#skill .skill-container section:nth-child(odd) {
+  margin-right: auto;
+}
+section#skill .skill-container section:nth-child(even) {
+  margin-left: auto;
+}
+section#skill .skill-container section .skill-item {
+  width: 50%;
+}
+section#skill .skill-container section .skill-item:not(:first-child) {
+  margin-top: 5vh;
+}
+section#skill .skill-container section:last-child {
+  margin-bottom: 10vh;
+}
 
 /* Works */
 section#works {
@@ -158,7 +198,7 @@ section#works {
 section#works p {
   font-size: 0.7rem;
 }
-p.section-sub-title {
+.section-sub-title {
   margin-bottom: 10vh;
 }
 section#works .works-card {
@@ -191,6 +231,15 @@ section#works ul li {
 section#works .description {
   margin-top: 7vh;
   text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  section#skill .skill-container section {
+    flex-direction: column;
+  }
+  section#skill .skill-container section:not(:first-child) {
+    margin-top: 10vh;
+  }
 }
 
 @media screen and (max-width: 700px) {
