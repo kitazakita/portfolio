@@ -5,10 +5,10 @@
   font-family: 'Noto Sans JP', sans-serif;
   color: white;
 }
-
-.test {
-  color: #fffafa;
+body {
+  overflow-x: hidden;
 }
+
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -162,13 +162,12 @@ p.section-sub-title {
   margin-bottom: 10vh;
 }
 section#works .works-card {
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 10vh;
   padding: 2rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background-color: rgb(66, 66, 66);
 }
 section#works .flex-wrapper {
   display: flex;
