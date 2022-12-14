@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-import 'swiper/css/pagination';
+// import 'swiper/css/pagination';
 import { Autoplay, EffectCards } from 'swiper';
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 
@@ -38,6 +38,7 @@ const Works = () => {
         modules={[Autoplay, EffectCards]}
         className='mySwiper'
         loop={true}
+        style={{ overflow: 'hidden' }}
       >
         {works.data.map((v, i) => {
           return (

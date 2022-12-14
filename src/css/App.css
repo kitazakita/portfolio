@@ -131,9 +131,9 @@ h1.page-title-name span {
   font-size: 3vw;
   letter-spacing: 2.9vw;
   text-align: center;
-  margin-top: 14vh;
   font-weight: normal;
   text-transform: uppercase;
+  display: inline-block;
 }
 h2.page-title {
   font-family: 'Alumni Sans Collegiate One', sans-serif;
@@ -152,13 +152,16 @@ section#skill p.skill-description {
   margin: 0 auto;
 }
 section#skill .skill-container {
+  color: #171717;
+  overflow: hidden;
 }
 section#skill .skill-container section {
+  position: relative;
   width: 80%;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   margin-top: 15vh;
   /* background-color: rgb(56, 54, 54); */
-  background: rgba(255, 255, 255, 0.25);
+  /* background: #ffffff40; */
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -168,6 +171,50 @@ section#skill .skill-container section {
   flex-wrap: wrap;
   gap: 2rem;
 }
+
+section#skill .skill-container section.left-view {
+}
+section#skill .skill-container section.left-view::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffffff40;
+  transform: translateX(-100%);
+  animation: left-view 2s forwards;
+}
+@keyframes left-view {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+section#skill .skill-container section.right-view {
+}
+section#skill .skill-container section.right-view::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ffffff40;
+  transform: translateX(100%);
+  animation: right-view 2s forwards;
+}
+@keyframes right-view {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 section#skill .skill-container section p {
   font-size: 0.8rem;
 }

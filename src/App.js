@@ -1,13 +1,6 @@
-import { useCallback, useLayoutEffect, useRef } from 'react';
-import Particles from 'react-particles';
-// import { loadFull } from 'tsparticles';
-// import { loadFireflyPreset } from 'tsparticles-preset-firefly';
-import { loadStarsPreset } from 'tsparticles-preset-stars';
-// import particlesOptions from './utils/particles.json'; //https://particles.js.org/
-// import particlesOptions from './utils/particles2.json'; //https://particles.js.org/
+import { useLayoutEffect, useRef } from 'react';
 import './css/reset.css';
 import './css/App.css';
-import back_bg from './imgs/back-bg.jpg';
 import Works from './components/Works.js';
 import Arrow from './components/Arrow.js';
 import Skill from './components/Skill';
@@ -16,15 +9,13 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import BuildCircleIcon from '@mui/icons-material/BuildCircle';
+import MyName from './components/MyName';
+import BackBg from './components/BackBg';
+import Test from './components/Test';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  // tsparticles
-  const particlesInit = useCallback(async (engine) => {
-    // await loadFull(engine);
-    await loadStarsPreset(engine);
-  }, []);
   //react-spring
   const [styles, setStyles] = useSpring(() => {
     return {
@@ -35,9 +26,6 @@ function App() {
   //useRef
   const githubRef = useRef();
   const skillRef = useRef();
-
-  //TOP Name用
-  const myName = 'Kitazaki Takanori';
 
   //gsap用
   useLayoutEffect(() => {
@@ -87,27 +75,11 @@ function App() {
 
   return (
     <>
-      <Particles
-        id='tsparticles'
-        init={particlesInit}
-        options={{
-          preset: 'stars',
-          background: {
-            opacity: 0,
-          },
-          particles: {
-            size: {
-              value: 1,
-            },
-          },
-        }}
-      />
-      <div
-        className='back-bg'
-        style={{ backgroundImage: `url(${back_bg})` }}
-      ></div>
+      <Test />
 
-      <h1 className='page-title-name'>{myName}</h1>
+      <BackBg />
+
+      <MyName gsap={gsap} ScrollTrigger={ScrollTrigger} />
 
       <animated.h2
         style={styles}
